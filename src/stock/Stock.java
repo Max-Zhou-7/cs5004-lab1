@@ -4,7 +4,7 @@ package stock;
 import java.text.DecimalFormat;
 
 /**
- *
+ * Beginnig of class with private param defined.
  */
 public class Stock {
   private String symbol;
@@ -13,13 +13,13 @@ public class Stock {
   private double currentPrice;
 
 /**
- * Default constructor
+ * Default constructor.
  */
 
 public Stock(){
-    this.symbol = "abc";
-    this.name = "aaa";
-    this.costBasis = 1.0;
+  this.symbol = "abc";
+  this.name = "aaa";
+  this.costBasis = 1.0;
 }
 
 /**
@@ -30,50 +30,50 @@ public Stock(){
  */
 
 public Stock(String symbol, String name, double costBasis){
-    this.symbol = symbol;
-    this.name = name;
-    this.costBasis = costBasis;
+  this.symbol = symbol;
+  this.name = name;
+  this.costBasis = costBasis;
 }
 
 
 /**
- * Symbol Getter
- * @return symbol
+ * Symbol Getter.
+ * @return symbol.
  */
 public String getSymbol(){
-    return this.symbol;
+  return this.symbol;
 }
 
 /**
- * Name Getter
- * @return name
+ * Name Getter.
+ * @return name.
  */
 public String getName(){
-    return this.name;
+  return this.name;
 }
 
 /**
- * cost basis Getter
- * @return costBasis
+ * cost basis Getter.
+ * @return costBasis.
  */
 public double getCostBasis(){
-    return this.costBasis;
+  return this.costBasis;
 }
 
 /**
- * Current Price Getter
- * @return currentPrice
+ * Current Price Getter.
+ * @return currentPrice.
  */
 public double getCurrentPrice() {
-    return currentPrice;
+  return currentPrice;
 }
 
 /**
- * cost Basis Setter
- * @param newBasis as new cost basis
+ * cost Basis Setter.
+ * @param newBasis as new cost basis.
  */
 public void setCostBasis(double newBasis){
-    this.costBasis = newBasis;
+  this.costBasis = newBasis;
 }
 
 /**
@@ -81,26 +81,26 @@ public void setCostBasis(double newBasis){
  * @param newCurrentPrice as new.
  */
 public void setCurrentPrice(double newCurrentPrice){
-    currentPrice = newCurrentPrice;
+  currentPrice = newCurrentPrice;
 }
 
 /**
- * Change Percent Getter
- * @return fractional change
+ * Change Percent Getter.
+ * @return fractional change.
  */
 public double getChangePercent(){
-    return (getCurrentPrice() - getCostBasis())/getCostBasis();
+  return (getCurrentPrice() - getCostBasis())/getCostBasis();
 }
 
 /**
- * Override string
- * @return newString
+ * Override string.
+ * @return newString.
  */
 public String toString(){
-    DecimalFormat moneyformat = new DecimalFormat("$ 0.00");
-    DecimalFormat percentformat = new DecimalFormat("0.00%");
-    return this.name + " Current Price: " + moneyformat.format(getCurrentPrice()) + "\n"
-            + " Gain/Loss: " + percentformat.format(getChangePercent());
+  DecimalFormat moneyformat = new DecimalFormat("$ 0.00");
+  DecimalFormat percentformat = new DecimalFormat("0.00%");
+  return this.name + " Current Price: " + moneyformat.format(getCurrentPrice()) + "\n"
+          + " Gain/Loss: " + percentformat.format(getChangePercent());
 }
 
 }
