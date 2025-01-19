@@ -98,7 +98,7 @@ public double getChangePercent(){
  */
 public String toString(){
     DecimalFormat moneyformat = new DecimalFormat("$ 0.00");
-    DecimalFormat percentformat = new DecimalFormat("0.00 %");
+    DecimalFormat percentformat = new DecimalFormat("0.00%");
     return this.name + " Current Price: " + moneyformat.format(getCurrentPrice()) + "\n"
             + " Gain/Loss: " + percentformat.format(getChangePercent());
 }
