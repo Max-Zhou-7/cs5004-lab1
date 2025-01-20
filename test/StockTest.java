@@ -71,9 +71,9 @@ public void testGetChangePercent() {
     Stock a = new Stock();
     a.setCurrentPrice(15.0);
     Stock b = new Stock("Circle", "Yuan", 10);
-    assertEquals((a.getCurrentPrice() - a.getCostBasis())/a.getCostBasis(),
+    assertEquals((a.getCurrentPrice() - a.getCostBasis()) / a.getCostBasis(),
                           a.getChangePercent(),0.01);
-    assertEquals((b.getCurrentPrice() - b.getCostBasis())/b.getCostBasis(),
+    assertEquals((b.getCurrentPrice() - b.getCostBasis()) / b.getCostBasis(),
                           b.getChangePercent(),0.01);
   }
 
